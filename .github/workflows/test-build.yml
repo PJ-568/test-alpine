@@ -33,6 +33,7 @@ jobs:
     - name: Build wasm
       run: |
         c2w --dockerfile ./Dockerfile alpine:3.20 target/out.wasm
+        ls -l target/ > target/ls.txt
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
