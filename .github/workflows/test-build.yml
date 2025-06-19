@@ -22,11 +22,11 @@ jobs:
       run: |
         pacman -Syyu --noconfirm docker docker-buildx wget git base-devel
 
-        mkdir -p c2w
-        wget https://github.com/container2wasm/container2wasm/releases/download/v0.8.2/container2wasm-v0.8.2-linux-amd64.tar.gz -O c2w/container2wasm-v0.8.2-linux-amd64.tar.gz
-        tar -zxvf c2w/container2wasm-v0.8.2-linux-amd64.tar.gz
-        mv c2w/c2w /usr/local/bin/c2w
-        mv c2w/c2w-net /usr/local/bin/c2w-net
+        wget https://github.com/container2wasm/container2wasm/releases/download/v0.8.2/container2wasm-v0.8.2-linux-amd64.tar.gz -O container2wasm-v0.8.2-linux-amd64.tar.gz
+        tar -zxvf container2wasm-v0.8.2-linux-amd64.tar.gz
+        mv c2w /usr/local/bin/c2w
+        mv c2w-net /usr/local/bin/c2w-net
+        rm container2wasm-v0.8.2-linux-amd64.tar.gz
 
         mkdir -p target
 
