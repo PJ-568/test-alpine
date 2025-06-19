@@ -20,7 +20,7 @@ jobs:
 
     - name: Setup system
       run: |
-        pacman -Syyu --noconfirm docker docker-buildx base-devel
+        pacman -Syyu --noconfirm docker docker-buildx wget git base-devel
 
         mkdir -p c2w
         wget https://github.com/container2wasm/container2wasm/releases/download/v0.8.2/container2wasm-v0.8.2-linux-amd64.tar.gz -O c2w/container2wasm-v0.8.2-linux-amd64.tar.gz
