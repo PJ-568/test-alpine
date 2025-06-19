@@ -33,9 +33,7 @@ jobs:
     - name: Build wasm
       run: |
         mkdir -p target/
-        cd target
-        c2w --to-js alpine:3.20 out.wasm --dockerfile ./Dockerfile
-        cd ..
+        c2w --to-js alpine:3.20 target/ --dockerfile ./Dockerfile
         ls -l
 
     - name: Upload artifact
