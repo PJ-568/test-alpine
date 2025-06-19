@@ -32,12 +32,12 @@ jobs:
 
     - name: Build wasm
       run: |
-        c2w --dockerfile ./Dockerfile alpine:3.20 target/out.wasm
-        ls -l target/ > target/ls.txt
+        c2w alpine:3.20 out.wasm --dockerfile ./Dockerfile
+        ls -l
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: out
-        path: target/*
+        name: target
+        path: out.wasm
         retention-days: 5
